@@ -1,0 +1,9 @@
+mysql:
+  image: mysql:5.6
+  ports:
+    - 3306:3306
+  environment:
+    MYSQL_DATABASE: docker_example
+    MYSQL_USER: docker
+    MYSQL_PASSWORD: dockerpassword
+    MYSQL_ROOT_PASSWORD: rootpassword
