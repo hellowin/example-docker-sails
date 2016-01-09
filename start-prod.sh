@@ -17,7 +17,8 @@ echo "Your Docker address: $DOCKER_ADDRESS";
 
 MYSQL_PORT_3306_TCP_ADDR=$DOCKER_ADDRESS \
 MYSQL_PORT_3306_TCP_PORT=3306 \
-MYSQL_USER=docker \
-MYSQL_PASSWORD=dockerpassword \
-MYSQL_DATABASE=docker_example \
-node app.js --prod
+MYSQL_ENV_MYSQL_USER=docker \
+MYSQL_ENV_MYSQL_PASSWORD=dockerpassword \
+MYSQL_ENV_MYSQL_DATABASE=docker_example \
+NODE_ENV=production \
+node app.js

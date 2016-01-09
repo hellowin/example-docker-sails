@@ -1,0 +1,18 @@
+dev:
+  image: hellowin/example-docker-sails:latest
+  ports:
+    - 8080:1337
+  links:
+    - mongo:mongo
+prod:
+  image: hellowin/example-docker-sails:latest
+  ports:
+    - 8081:1337
+  links:
+    - mongo:mongo
+  environment:
+    - NODE_ENV=production
+mongo:
+  image: mongo:3
+  ports:
+    - 27017:27017
